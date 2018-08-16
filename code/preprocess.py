@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# In[26]:
+# In[1]:
 
 
 import numpy as np
@@ -17,7 +17,7 @@ import math
 from keras.preprocessing.sequence import pad_sequences
 
 
-# In[12]:
+# In[2]:
 
 
 # Load dataset
@@ -35,7 +35,7 @@ nat=np.array(nat)
 print(nat)
 
 
-# In[13]:
+# In[3]:
 
 
 for i in range(0,len(native)):
@@ -43,14 +43,14 @@ for i in range(0,len(native)):
 native=np.array(native)
 
 
-# In[14]:
+# In[4]:
 
 
 for i in tqdm(range(len(df))):
     try:
         fi=(path+filename[i]+".wav")
         rate,data=librosa.load(fi)
-        mfcc = librosa.feature.mfcc(y=rate,sr=data, n_mfcc=13)
+        mfcc = librosa.feature.mfcc(y=rate,sr=data, n_mfcc=20)
         for j in range(0,len(native)):
             if(nat[i]==native[j]):
                 y_train.append(token[j])
@@ -60,41 +60,52 @@ for i in tqdm(range(len(df))):
         1
 
 
-# In[42]:
+# In[6]:
+
+
+temp=[]
+for j in x_train:
+    temp.append(j.shape[1])
+print(int((min(temp)+max(temp))/2))
+
+
+# In[7]:
 
 
 X_train=[]
 for i in x_train:
-    X_train.append(pad_sequences(i, maxlen=2600))
+    X_train.append(pad_sequences(i, maxlen=2634))
 
 
-# In[43]:
+# In[8]:
 
 
 X_train=np.array(X_train)
 
 
-# In[44]:
+# In[9]:
 
 
 X_train.shape
 
 
-# In[45]:
+# In[10]:
 
 
 y=np_utils.to_categorical(y_train, 214)
-y_train,y_test=y[0:1800],y[1800:2137]
-x_train,x_test=X_train[0:1800],X_train[1800:2137]
-print(x_train.shape,x_test.shape)
-print(y_train.shape,y_test.shape)
+y_train,y_test,y_val=y[0:1800],y[1800:1937],y[1937:2137]
+x_train,x_test,x_val=X_train[0:1800],X_train[1800:1937],X_train[1937:2137]
+print(x_train.shape,x_test.shape,x_val.shape)
+print(y_train.shape,y_test.shape,y_val.shape)
 
 
-# In[39]:
+# In[12]:
 
 
-np.save('../Numpyfiles/train_x.npy', x_train) 
-np.save('../Numpyfiles/train_y.npy', y_train) 
-np.save('../Numpyfiles/test_x.npy', x_test) 
-np.save('../Numpyfiles/test_y.npy', y_test) 
+np.save('../MAT/train_x.npy', x_train) 
+np.save('../MAT/train_y.npy', y_train) 
+np.save('../MAT/test_x.npy', x_test) 
+np.save('../MAT/test_y.npy', y_test) 
+np.save('../MAT/val_x.npy', x_val) 
+np.save('../MAT/val_y.npy', y_val) 
 
