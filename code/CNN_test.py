@@ -1,22 +1,19 @@
 import numpy as np
-from keras.models import model_from_json
 from keras.models import load_model
+
 x_train = np.load('../MAT/train_x.npy')
 x_test = np.load('../MAT/test_x.npy')
 y_train = np.load('../MAT/train_y.npy')
-y_test= np.load('../MAT/test_y.npy')
-x_val=np.load('../MAT/val_x.npy')
-y_val=np.load('../MAT/val_y.npy')
-x_train=x_train.reshape(x_train.shape[0],x_train.shape[1],x_train.shape[2],1)
-x_test=x_test.reshape(x_test.shape[0],x_test.shape[1],x_test.shape[2],1)
-x_val=x_val.reshape(x_val.shape[0],x_val.shape[1],x_val.shape[2],1)
+y_test = np.load('../MAT/test_y.npy')
+
+x_train = x_train.reshape(x_train.shape[0], x_train.shape[1], x_train.shape[2], 1)
+x_test = x_test.reshape(x_test.shape[0], x_test.shape[1], x_test.shape[2], 1)
 print(x_train.shape)
 print(x_test.shape)
 print(y_train.shape)
 print(y_test.shape)
-print(x_val.shape)
-print(y_val.shape)
-model=load_model("../Models/CNN.h5")
-pred=model.evaluate(x=x_test[0:100],y=x_test[0:100],batch_size=1,verbose=1)
-print("accuracy",pred[1])
-print("loss",pred[0])
+
+model = load_model("../Models/CNN.h5")
+pred = model.evaluate(x=x_test, y=y_test, verbose=2)
+print("accuracy", pred[1])
+print("loss", pred[0])
