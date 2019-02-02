@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18561761-01c1-423b-84d1-072e3be538b2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/code/demo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/plotaudio.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/plotmsr.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/test_demo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/CNN.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/CNN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/GRU.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/GRU.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/GRU_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/GRU_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/preprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/preprocess.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/CNN.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/CNN_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/Dense.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/GRU.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/GRU_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/plotaudio.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/plotmsr.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,15 +58,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/GRU_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="15" selection-start-column="15" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/code/test_demo.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
@@ -81,22 +69,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/GRU.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="43" column="10" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/code/preprocess.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
+            <state relative-caret-position="425">
               <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
@@ -444,13 +420,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/GRU_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="15" selection-start-column="15" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/shutil.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
@@ -468,22 +437,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/preprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/test_demo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/GRU_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="15" selection-start-column="15" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/preprocess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
