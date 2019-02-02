@@ -37,11 +37,11 @@ def custom_net(input_shape):  # Custom Model
 
 
 cModel = custom_net(x_train.shape[1:])
-cModel.compile('adam', 'categorical_crossentropy', metrics=['accuracy'])
+cModel.compile('adadelta', 'categorical_crossentropy', metrics=['accuracy'])
 history = History()
 temp=[]
 i=1
-cModel.fit(x=x_train, y=y_train, epochs=75)
+cModel.fit(x=x_train, y=y_train, epochs=15)
 
 
 
