@@ -25,10 +25,10 @@ def gru_model(x_train):
 
 # define paramaetes
 nb_classes = 214
-n_batch = 1709
+n_batch = 641
 # train step
 model = gru_model(x_train_data)
-model.fit(x_train_data, y_train, epochs=50, batch_size=n_batch, verbose=1)
+model.fit(x_train_data, y_train, epochs=100, batch_size=n_batch, verbose=1)
 # save model
 model.save('../Models/GRU.h5')
 

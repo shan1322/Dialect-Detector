@@ -6,6 +6,8 @@ from keras.preprocessing.sequence import pad_sequences
 from keras.utils import np_utils
 from sklearn.model_selection import train_test_split
 from tqdm import tqdm
+from sklearn.model_selection import train_test_split
+
 
 # Load dataset
 df = pd.read_csv('../speakers_all.csv')
@@ -17,6 +19,8 @@ filename = np.array(filename)
 # Get a dict of label and native
 x, y = [], []
 token = []
+map = dict()
+
 nat = df['native_language']
 nat = np.array(nat)
 for i in range(0, len(native)):
@@ -32,6 +36,7 @@ for i in tqdm(range(len(filename))):
             if (nat[i] == native[j]):
                 y.append(token[j])
                 x.append(mfcc)
+                map[token[j]] = native[j]
     except:
         print("error")
 x_train = (x)
@@ -61,10 +66,5 @@ np.save('../MAT/train_x.npy', x_train)
 np.save('../MAT/train_y.npy', y_train)
 np.save('../MAT/test_x.npy', x_test)
 np.save('../MAT/test_y.npy', y_test)
-
-map = dict()
-for i in range(len(native)):
-    map[token[i]] = native[i]
-
 with open('data.txt', 'w') as f:
     json.dump(map, f)
